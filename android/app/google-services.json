@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237496704908",
+    "project_id": "theclinic-7defb",
+    "storage_bucket": "theclinic-7defb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237496704908:android:6bbc6309e09176178300a9",
+        "android_client_info": {
+          "package_name": "com.example.theclinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237496704908-dd7rohe314qnbcqg9s7f2d7kb2iho497.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBINCvbrp9a26wq9UgqOAaThQX5Sn15rNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237496704908-dd7rohe314qnbcqg9s7f2d7kb2iho497.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
