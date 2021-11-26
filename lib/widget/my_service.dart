@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:theclinic/utillity/my_style.dart';
-import 'package:theclinic/utillity/profile.dart';
+import 'package:theclinic/widget/editprofile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -9,6 +9,8 @@ import 'package:theclinic/components/category_card.dart';
 import 'package:theclinic/components/doctor_card.dart';
 import 'package:theclinic/components/search_bar.dart';
 import 'package:theclinic/constant.dart';
+import 'package:theclinic/widget/promotion.dart';
+import 'package:theclinic/map/map.dart';
 
 class MyService extends StatefulWidget {
   @override
@@ -25,17 +27,16 @@ class _MyServiceState extends State<MyService> {
     findNameAndEmail();
   }
 
-  Future<Null> findNameAndEmail()async {
+  Future<Null> findNameAndEmail() async {
     await Firebase.initializeApp().then((value) async {
-     await FirebaseAuth.instance.authStateChanges().listen((event) {
-       setState(() {
-         name = event.displayName;
-         email = event.email;
-       });
-     });
+      await FirebaseAuth.instance.authStateChanges().listen((event) {
+        setState(() {
+          name = event.displayName;
+          email = event.email;
+        });
+      });
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -53,16 +54,16 @@ class _MyServiceState extends State<MyService> {
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage('https://cdn.pixabay.com/photo/2016/01/19/15/05/doctor-1149149_960_720.jpg'),
-                    fit: BoxFit.cover,
-                  )
-              ),
+                image: NetworkImage(
+                    'https://image.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61803.jpg'),
+                fit: BoxFit.cover,
+              )),
               accountName: MyStyle().titleH4(name == null ? 'Name' : name),
               accountEmail: MyStyle().titleH4(email == null ? 'email' : email),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage('https://image.freepik.com/free-vector/doctor-character-background_1270-84.jpg')
-                ),
-              ),
+                  backgroundImage: NetworkImage(
+                      'https://image.freepik.com/free-vector/doctor-character-background_1270-84.jpg')),
+            ),
             ListTile(
               leading: Icon(Icons.home),
               title: const Text('หน้าแรก'),
@@ -79,7 +80,7 @@ class _MyServiceState extends State<MyService> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProFile()),
+                  MaterialPageRoute(builder: (context) => MyApp()),
                 );
               },
             ),
@@ -87,13 +88,26 @@ class _MyServiceState extends State<MyService> {
               leading: Icon(Icons.monetization_on),
               title: const Text('โปรโมชัน'),
               onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyPro()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: const Text('โลเคชัน'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MapsPage()),
+                );
               },
             ),
             ListTile(
               leading: Icon(Icons.date_range),
               title: const Text('วันนัด'),
-              onTap: () {
-              },
+              onTap: () {},
             ),
             /*ListTile(
             leading: Icon(Icons.search),
@@ -102,25 +116,16 @@ class _MyServiceState extends State<MyService> {
             },
           ),*/
             ListTile(
-              leading: Icon(Icons.phone),
-              title: const Text('ติดต่อ'),
-              onTap: () {
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.payment),
               title: const Text('ชำระเงิน'),
-              onTap: () {
-              },
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.question_answer),
               title: const Text('แบบสอบถาม'),
-              onTap: () {
-              },
+              onTap: () {},
             ),
             ListTile(
-
               leading: Icon(Icons.logout),
               title: const Text('ออกจากระบบ'),
               onTap: () async {
@@ -134,7 +139,6 @@ class _MyServiceState extends State<MyService> {
           ],
         ),
       ),
-
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         bottom: false,
@@ -292,5 +296,3 @@ class _MyServiceState extends State<MyService> {
     );
   }
 }
-
-

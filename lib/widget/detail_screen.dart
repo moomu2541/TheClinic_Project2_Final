@@ -158,7 +158,7 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'ชื่อ : \n ประเภท : \n ประสบการณ์ : \n ',
+                        'ชื่อ : ดร.ปิยะฉัตร วิจาราณ์\n ประเภท : หมอหัวใจ \n ประสบการณ์ : เคยเป็นหมอรพ.กรุงเทพ\n ',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),

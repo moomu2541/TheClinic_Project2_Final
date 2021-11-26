@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:theclinic/utillity/dialog.dart';
@@ -134,7 +136,7 @@ class _RegisterState extends State<Register> {
   FloatingActionButton buildFloatingActionButton() {
     return FloatingActionButton(
       onPressed: () {
-        print('name = $name, user = $user, password = $password');
+        print('name = $name, user = $user,\ password = $password');
         if ((name?.isEmpty??true)||(user?.isEmpty??true)||(password?.isEmpty??true)){
           print('Have Space');
           normalDialog(context, 'Please enter information');
@@ -152,11 +154,24 @@ class _RegisterState extends State<Register> {
       print('######## information to database ########');
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: user, password: password)
-          .then((value)async {
+          .then((value) async {
             print('Register Success');
             await value.user.updateProfile(displayName: name).then((value) =>
                 Navigator.pushNamedAndRemoveUntil(
                     context, '/myService', (route) => false));
+                    /*String uid = value.user.uid;
+                    print('uid = $uid');*/
+
+
+              /*UserModel model = UserModel(email: user, password: password, name: name );
+              Map<String, dynamic> data = model.toMap();
+
+              await FirebaseFirestore.instance.collection('UserClinic')
+                  .doc(user)
+                  .set(data)
+                  .then((value) => print('Save to Firestore Success'));*/
+
+
       }).catchError((value) {
         normalDialog(context, value.message);
       });
