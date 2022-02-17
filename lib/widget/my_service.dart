@@ -11,6 +11,8 @@ import 'package:theclinic/components/search_bar.dart';
 import 'package:theclinic/constant.dart';
 import 'package:theclinic/widget/promotion.dart';
 import 'package:theclinic/map/map.dart';
+import 'package:theclinic/shop/main.dart';
+import 'package:theclinic/form/main.dart';
 
 class MyService extends StatefulWidget {
   @override
@@ -78,10 +80,10 @@ class _MyServiceState extends State<MyService> {
               leading: Icon(Icons.account_box),
               title: const Text('ข้อมูลส่วนตัว'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyApp()),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => MyForm()),
+                // );
               },
             ),
             ListTile(
@@ -107,14 +109,23 @@ class _MyServiceState extends State<MyService> {
             ListTile(
               leading: Icon(Icons.date_range),
               title: const Text('วันนัด'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyForm()),
+                );
+              },
             ),
-            /*ListTile(
-            leading: Icon(Icons.search),
-            title: const Text('ผลตรวจ'),
+            ListTile(
+            leading: Icon(Icons.shop_2),
+            title: const Text('ซื้อสินค้า'),
             onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyShop()),
+                );
             },
-          ),*/
+          ),
             ListTile(
               leading: Icon(Icons.payment),
               title: const Text('ชำระเงิน'),

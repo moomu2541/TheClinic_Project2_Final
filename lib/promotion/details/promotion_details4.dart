@@ -2,20 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:theclinic/utillity/my_style.dart';
 
-class Healthcheck extends StatelessWidget {
+class Healthcheck4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
+        backgroundColor: MyStyle().primaryColor,
         title: Text("Detail"),
       ),
           body: Column(
         children: [
           Center(
-            child: Image.asset("assets/images/coverpro2.png"),
+            child: Image.asset("assets/images/coverpro4.png"),
           ),
           Center(
-            child: Text('\nตรวจสุขภาพวัยเกษียณ ราคา 4,000 บาท\n',
+            child: Text('\nตรวจสุขภาพวัยทำงาน ราคา 1,590 บาท\n',
                 style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
           ),
           Column(
@@ -30,11 +31,13 @@ class Healthcheck extends StatelessWidget {
               Text("5.ตรวจการทำงานของตับ\n"),
             ],
           ),
-          new RaisedButton(
-            child: new Text('Buy',
-              style: new TextStyle(color: Colors.white),
+          ElevatedButton(
+            child: Text('Buy',
+              style: TextStyle(color: Colors.white),
             ),
-            color: Colors.green,
+            style: ButtonStyle( 
+              backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+            ),
           ),
       ],
     ),

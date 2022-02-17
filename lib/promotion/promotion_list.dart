@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:theclinic/promotion/promotion_details.dart';
 import 'package:theclinic/utillity/my_style.dart';
+import 'package:theclinic/promotion/details/promotion_details.dart';
+import 'package:theclinic/promotion/details/promotion_details2.dart';
+import 'package:theclinic/promotion/details/promotion_details3.dart';
+import 'package:theclinic/promotion/details/promotion_details4.dart';
+import 'package:theclinic/promotion/details/promotion_details5.dart';
+import 'package:theclinic/promotion/details/promotion_details6.dart';
+import 'package:theclinic/promotion/details/promotion_details7.dart';
+
+
+
 
 class Promotion extends StatefulWidget {
   @override
@@ -13,36 +22,43 @@ class _PromotionState extends State<Promotion> {
       "https://www.bumrungrad.com/getattachment/739ef34b-a492-4970-93c3-2e53f14533ba/image.jpg",
       "ตรวจสุขภาพวัยเกษียณ",
       '4000฿',
+      '0',
     ],
     [
       "https://www.hongthongrice.com/life/wp-content/uploads/2015/11/01.%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%B3%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%A2.jpg",
       "ตรวจสุขภาพสำหรับฟิตเนส",
       '2690฿',
+      '1',
     ],
     [
       "https://static.posttoday.com/media/content/2020/04/14/A85697FC49691E6AFAE8392ACAC904AF.jpg",
       "ตรวจสุขภาพครอบครัว",
       '3900฿',
+      '2',
     ],
     [
       "https://www.cigna.co.th/sites/default/files/pictures/Cancer-in-30-above-20181024-1.jpg",
       "ตรวจสุขภาพวัยทำงาน",
       '1590฿',
+      '3',
     ],
     [
       "https://media.istockphoto.com/photos/six-preteen-friends-piggybacking-in-a-park-close-up-portrait-picture-id839295596?b=1&k=20&m=839295596&s=170667a&w=0&h=psoRo47-LlSUg8zPxY4Crf2xWz_ZAEggkDpJmuGSI2w=",
       "ตรวจสุขภาพวัยเด็ก",
       '1390฿',
+      '4',
     ],
     [
       "https://www.vejthani.com/wp-content/uploads/2019/12/vejthani-blog-1-e1575443436645.jpg",
       "ตรวจสุขภาพประจำปี",
       '7990฿',
+      '5',
     ],
     [
       "https://www.efinancethai.com/news/picture/2021/11/15/T/5957512.jpg",
       "ตรวจโควิด",
       '1290฿',
+      '6',
     ],
   ];
 
@@ -113,10 +129,62 @@ class _PromotionState extends State<Promotion> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Healthcheck()),
-                      );
+                      if (promotionLists[index][3]=='0') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='1') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck2()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='2') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck3()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='3') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck4()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='4') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck2()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='5') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck2()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='6') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck2()),
+                        );
+                      }
+                      else if (promotionLists[index][3]=='7') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Healthcheck2()),
+                        );
+                      }
                     },
                   ),
                 ),
@@ -128,3 +196,4 @@ class _PromotionState extends State<Promotion> {
     );
   }
 }
+
