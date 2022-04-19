@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:theclinic/utillity/my_style.dart';
+import 'package:theclinic/widget/my_service.dart';
 
 class DisplayScreen extends StatefulWidget {
   @override
@@ -14,7 +15,11 @@ class _DisplayScreenState extends State<DisplayScreen> {
       appBar: AppBar(
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return MyService();
+            }));
+          },
           ),
           backgroundColor: MyStyle().primaryColor,
           title: Text("Appointment Record")),

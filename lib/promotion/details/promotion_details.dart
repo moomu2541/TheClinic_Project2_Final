@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:theclinic/payqr/qrcode.dart';
 import 'package:theclinic/utillity/my_style.dart';
 
 class Healthcheck extends StatelessWidget {
@@ -26,9 +27,12 @@ class Healthcheck extends StatelessWidget {
                   style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold)),
               Text("1.ตรวจความสมบูรณ์ของเลิอด"),
               Text("2.ตรวจปัสสาวะ"),
-              Text("3.ตรวจระดับน้ำตาลในกระแสเลือด"),
-              Text("4.ตรวจระดับไขมันในเลือด"),
-              Text("5.ตรวจการทำงานของตับ\n"),
+              Text("3.ตรวจอุจจาระ"),
+              Text("4.ตรวจระดับน้ำตาลในกระแสเลือด"),
+              Text("5.ตรวจระดับไขมันในเลือด"),
+              Text("6.ตรวจการทำงานของตับ"),
+              Text("7.ตรวจการทำงานของไต"),
+              Text("8.ตรวจการทำงานของต่อมไทรอยด์\n"),
             ],
           ),
           ElevatedButton(
@@ -38,6 +42,11 @@ class Healthcheck extends StatelessWidget {
             style: ButtonStyle( 
               backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
             ),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Qrcode();
+              }));
+            }
           ),
       ],
     ),

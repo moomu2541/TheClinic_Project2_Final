@@ -107,9 +107,9 @@ class DetailScreen extends StatelessWidget {
                                       color: kBlueColor.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: SvgPicture.asset(
-                                      'assets/icons/phone.svg',
-                                    ),
+                                    // child: SvgPicture.asset(
+                                    //   'assets/icons/phone.svg',
+                                    // ),
                                   ),
                                   SizedBox(
                                     width: 16,
@@ -120,9 +120,9 @@ class DetailScreen extends StatelessWidget {
                                       color: kYellowColor.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: SvgPicture.asset(
-                                      'assets/icons/chat.svg',
-                                    ),
+                                    // child: SvgPicture.asset(
+                                    //   'assets/icons/chat.svg',
+                                    // ),
                                   ),
                                   SizedBox(
                                     width: 16,
@@ -133,9 +133,9 @@ class DetailScreen extends StatelessWidget {
                                       color: kOrangeColor.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: SvgPicture.asset(
-                                      'assets/icons/video.svg',
-                                    ),
+                                    // child: SvgPicture.asset(
+                                    //   'assets/icons/video.svg',
+                                    // ),
                                   ),
                                 ],
                               ),
@@ -158,7 +158,7 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'ชื่อ : ดร.ปิยะฉัตร วิจาราณ์\n ประเภท : หมอหัวใจ \n ประสบการณ์ : เคยเป็นหมอรพ.กรุงเทพ\n ',
+                        'การศึกษา : \nเกียรติบัตร :  \nประสบการณ์ : ',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),
@@ -168,7 +168,7 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'กำหนดวันนัด',
+                        'กำหนดการทำงานหมอ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -179,30 +179,30 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       ScheduleCard(
-                        'ประวัติ',
-                        'Sunday . 9am - 11am',
-                        '12',
-                        'Jan',
+                        'เวลาทำงาน',
+                        '09.00 am - 11.00 am',
+                        '1',
+                        'Monday',
                         kBlueColor,
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       ScheduleCard(
-                        'ประวัติ',
-                        'Sunday . 9am - 11am',
-                        '13',
-                        'Jan',
+                        'เวลาทำงาน',
+                        '09.00 am - 11.00 am',
+                        '2',
+                        'Sunday',
                         kYellowColor,
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       ScheduleCard(
-                        'ประวัติ',
-                        'Sunday . 9am - 11am',
-                        '14',
-                        'Jan',
+                        'เวลาทำงาน',
+                        '09.00 am - 11.00 am',
+                        '3',
+                        'Wednesday',
                         kOrangeColor,
                       ),
                       SizedBox(

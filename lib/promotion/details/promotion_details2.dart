@@ -16,7 +16,7 @@ class Healthcheck2 extends StatelessWidget {
             child: Image.asset("assets/images/coverpro3.png"),
           ),
           Center(
-            child: Text('\nตรวจสุขภาพสำหรับฟิตเนส ราคา 2,690 บาท\n',
+            child: Text('\nตรวจสุขภาพสำหรับฟิตเนส ราคา 1,590 บาท\n',
                 style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
           ),
           Column(
@@ -28,7 +28,7 @@ class Healthcheck2 extends StatelessWidget {
               Text("2.ตรวจปัสสาวะ"),
               Text("3.ตรวจระดับน้ำตาลในกระแสเลือด"),
               Text("4.ตรวจระดับไขมันในเลือด"),
-              Text("5.ตรวจการทำงานของตับ\n"),
+              Text("5.ตรวจประเมินภาวะโภชนาโดยนักโภชนบำบัด\n")
             ],
           ),
           ElevatedButton(

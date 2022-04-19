@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:theclinic/date/calendar.dart';
+import 'package:theclinic/date/main.dart';
+import 'package:theclinic/diseases/main.dart';
+import 'package:theclinic/feedback/mainfeed.dart';
+import 'package:theclinic/profile/profile.dart';
 import 'package:theclinic/utillity/my_style.dart';
 import 'package:theclinic/widget/editprofile.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,7 +15,6 @@ import 'package:theclinic/components/doctor_card.dart';
 import 'package:theclinic/components/search_bar.dart';
 import 'package:theclinic/constant.dart';
 import 'package:theclinic/widget/promotion.dart';
-import 'package:theclinic/map/map.dart';
 import 'package:theclinic/shop/main.dart';
 import 'package:theclinic/form/main.dart';
 
@@ -67,23 +71,13 @@ class _MyServiceState extends State<MyService> {
                       'https://image.freepik.com/free-vector/doctor-character-background_1270-84.jpg')),
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: const Text('หน้าแรก'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyService()),
-                );
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.account_box),
               title: const Text('ข้อมูลส่วนตัว'),
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => MyForm()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Ep241Page()),
+                );
               },
             ),
             ListTile(
@@ -97,44 +91,54 @@ class _MyServiceState extends State<MyService> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.location_on),
-              title: const Text('โลเคชัน'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MapsPage()),
-                );
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.date_range),
               title: const Text('วันนัด'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyForm()),
+                  MaterialPageRoute(builder: (context) => MyForm2()),
                 );
               },
             ),
             ListTile(
-            leading: Icon(Icons.shop_2),
-            title: const Text('ซื้อสินค้า'),
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyShop()),
-                );
-            },
-          ),
-            ListTile(
-              leading: Icon(Icons.payment),
-              title: const Text('ชำระเงิน'),
-              onTap: () {},
+              leading: Icon(Icons.data_usage),
+              title: const Text('ผลตรวจ'),
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => MyForm2()),
+              //   );
+              // },
             ),
+            // ListTile(
+            //   leading: Icon(Icons.shop_2),
+            //   title: const Text('ซื้อสินค้า'),
+            //   onTap: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => MyShop()),
+            //     );
+            //   },
+            // ),
             ListTile(
               leading: Icon(Icons.question_answer),
               title: const Text('แบบสอบถาม'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FeedBack1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.coronavirus),
+              title: const Text('รู้เรื่องโรค'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainPage3()),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.logout),

@@ -16,7 +16,7 @@ class Healthcheck4 extends StatelessWidget {
             child: Image.asset("assets/images/coverpro4.png"),
           ),
           Center(
-            child: Text('\nตรวจสุขภาพวัยทำงาน ราคา 1,590 บาท\n',
+            child: Text('\nตรวจสุขภาพวัยทำงาน ราคา 2,690 บาท\n',
                 style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
           ),
           Column(
@@ -25,10 +25,10 @@ class Healthcheck4 extends StatelessWidget {
               Text('รายละเอียดการให้บริการ\n',
                   style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold)),
               Text("1.ตรวจความสมบูรณ์ของเลิอด"),
-              Text("2.ตรวจปัสสาวะ"),
-              Text("3.ตรวจระดับน้ำตาลในกระแสเลือด"),
-              Text("4.ตรวจระดับไขมันในเลือด"),
-              Text("5.ตรวจการทำงานของตับ\n"),
+              Text("2.ตรวจระดับน้ำตาลในกระแสเลือด"),
+              Text("3.ตรวจระดับไขมันในเลือด"),
+              Text("4.ตรวจสารบ่งชี้มะเร็ง"),
+              Text("5.ตรวจหาอัตราเสี่่ยงการเกิดโรคหัวใจ\n"),
             ],
           ),
           ElevatedButton(

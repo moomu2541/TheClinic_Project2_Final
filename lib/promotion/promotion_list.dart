@@ -4,9 +4,7 @@ import 'package:theclinic/promotion/details/promotion_details.dart';
 import 'package:theclinic/promotion/details/promotion_details2.dart';
 import 'package:theclinic/promotion/details/promotion_details3.dart';
 import 'package:theclinic/promotion/details/promotion_details4.dart';
-import 'package:theclinic/promotion/details/promotion_details5.dart';
 import 'package:theclinic/promotion/details/promotion_details6.dart';
-import 'package:theclinic/promotion/details/promotion_details7.dart';
 
 
 
@@ -27,7 +25,7 @@ class _PromotionState extends State<Promotion> {
     [
       "https://www.hongthongrice.com/life/wp-content/uploads/2015/11/01.%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%B3%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%A2.jpg",
       "ตรวจสุขภาพสำหรับฟิตเนส",
-      '2690฿',
+      '1590฿',
       '1',
     ],
     [
@@ -39,7 +37,7 @@ class _PromotionState extends State<Promotion> {
     [
       "https://www.cigna.co.th/sites/default/files/pictures/Cancer-in-30-above-20181024-1.jpg",
       "ตรวจสุขภาพวัยทำงาน",
-      '1590฿',
+      '2690฿',
       '3',
     ],
     [
@@ -56,8 +54,8 @@ class _PromotionState extends State<Promotion> {
     ],
     [
       "https://www.efinancethai.com/news/picture/2021/11/15/T/5957512.jpg",
-      "ตรวจโควิด",
-      '1290฿',
+      "ตรวจโควิด-19",
+      '1200฿',
       '6',
     ],
   ];
@@ -157,32 +155,25 @@ class _PromotionState extends State<Promotion> {
                               builder: (context) => Healthcheck4()),
                         );
                       }
-                      else if (promotionLists[index][3]=='4') {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Healthcheck2()),
-                        );
-                      }
-                      else if (promotionLists[index][3]=='5') {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Healthcheck2()),
-                        );
-                      }
+                      // else if (promotionLists[index][3]=='4') {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => Healthcheck2()),
+                      //   );
+                      // }
+                      // else if (promotionLists[index][3]=='5') {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => Healthcheck2()),
+                      //   );
+                      // } 
                       else if (promotionLists[index][3]=='6') {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Healthcheck2()),
-                        );
-                      }
-                      else if (promotionLists[index][3]=='7') {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Healthcheck2()),
+                              builder: (context) => Healthcheck6()),
                         );
                       }
                     },
